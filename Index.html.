@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Send Crypto — Wallet Address</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f6f8fb; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+    .card { background:#fff; padding:22px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); text-align:center; width:320px; }
+    .address { word-break:break-all; font-size:14px; color:#111; margin:12px 0; }
+    button, a.btn { display:inline-block; margin:6px 4px; padding:10px 12px; border-radius:8px; border:none; cursor:pointer; text-decoration:none; color:#fff; background:#1a73e8; }
+    img.qr { width:160px; height:160px; border-radius:8px; margin-top:8px; }
+    small { color:#666; display:block; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Send Crypto</h2>
+    <div><strong>Address</strong></div>
+    <div id="addr" class="address">YOUR_ADDRESS_HERE</div>
+
+    <button onclick="copyAddr()">Copy Address</button>
+
+    <!-- deep link for Ethereum; update scheme for other blockchains as needed -->
+    <a id="openWallet" class="btn" href="ethereum:YOUR_ADDRESS_HERE">Open in Wallet App</a>
+
+    <!-- QR code from Google Chart API (works without extra libraries) -->
+    <div> <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Send Crypto — Wallet Address</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f6f8fb; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+    .card { background:#fff; padding:22px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); text-align:center; width:320px; }
+    .address { word-break:break-all; font-size:14px; color:#111; margin:12px 0; }
+    button, a.btn { display:inline-block; margin:6px 4px; padding:10px 12px; border-radius:8px; border:none; cursor:pointer; text-decoration:none; color:#fff; background:#1a73e8; }
+    img.qr { width:160px; height:160px; border-radius:8px; margin-top:8px; }
+    small { color:#666; display:block; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Send Crypto</h2>
+    <div><strong>Address</strong></div>
+    <div id="addr" class="address">YOUR_ADDRESS_HERE</div>
+
+    <button onclick="copyAddr()">Copy Address</button>
+
+    <!-- deep link for Ethereum; update scheme for other blockchains as needed -->
+    <a id="openWallet" class="btn" href="ethereum:YOUR_ADDRESS_HERE">Open in Wallet App</a>
+
+    <!-- QR code from Google Chart API (works without extra libraries) -->
+    <div>
+      <img id="qr" class="qr" alt="QR code" src="" />
+    </div>
+    <small>Scan to send or click Open in Wallet App.</small>
+  </div>
+
+  <script>
+    const address = document.getElementById('addr').textContent.trim();
+    const qrImage = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' + encodeURIComponent(address);
+    document.getElementById('qr').src = qrImage;
+    document.getElementById('openWallet').href = 'ethereum:' + address;
+
+    function copyAddr(){
+      navigator.clipboard.writeText(address).then(() => {
+        alert('Address copied to clipboard');
+      }).catch(()=> {
+        prompt('Copy this address:', address);
+      });
+    }
+  </script>
+</body>
+</html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Send Crypto — Wallet Address</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f6f8fb; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+    .card { background:#fff; padding:22px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); text-align:center; width:320px; }
+    .address { word-break:break-all; font-size:14px; color:#111; margin:12px 0; }
+    button, a.btn { display:inline-block; margin:6px 4px; padding:10px 12px; border-radius:8px; border:none; cursor:pointer; text-decoration:none; color:#fff; background:#1a73e8; }
+    img.qr { width:160px; height:160px; border-radius:8px; margin-top:8px; }
+    small { color:#666; display:block; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Send Crypto</h2>
+    <div><strong>Address</strong></div>
+    <div id="addr" class="address">YOUR_ADDRESS_HERE</div>
+
+    <button onclick="copyAddr()">Copy Address</button>
+
+    <!-- deep link for Ethereum; update scheme for other blockchains as needed -->
+    <a id="openWallet" class="btn" href="ethereum:YOUR_ADDRESS_HERE">Open in Wallet App</a>
+
+    <!-- QR code from Google Chart API (works without extra libraries) -->
+    <div>
+      <img id="qr" class="qr" alt="QR code" src="" />
+    </div>
+    <small>Scan to send or click Open in Wallet App.</small>
+  </div>
+
+  <script>
+    const address = document.getElementById('addr').textContent.trim();
+    const qrImage = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' + encodeURIComponent(address);
+    document.getElementById('qr').src = qrImage;
+    document.getElementById('openWallet').href = 'ethereum:' + address;
+
+    function copyAddr(){
+      navigator.clipboard.writeText(address).then(() => {
+        alert('Address copied to clipboard');
+      }).catch(()=> {
+        prompt('Copy this address:', address);
+      });
+    }
+  </script>
+</body>
+</html>
+      <img id="qr" class="qr" alt="QR code" src="" />
+    </div>
+    <small>Scan to send or click Open in Wallet App.</small>
+  </div>
+
+  <script>
+    const address = document.getElementById('addr').textContent.trim();
+    const qrImage = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' + encodeURIComponent(address);
+    document.getElementById('qr').src = qrImage;
+    document.getElementById('openWallet').href = 'ethereum:' + address;
+
+    function copyAddr(){
+      navigator.clipboard.writeText(address).then(() => {
+        alert('Address copied to clipboard');
+      }).catch(()=> {
+        prompt('Copy this address:', address);
+      });
+    }
+  </script>
+</body>
+</html>
